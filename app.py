@@ -14,15 +14,15 @@ def hello():
 
 @app.route('/post', methods=["POST"])
 def echo():
-    print(request.data)
-    return Response(response=request.data.decode('utf-8'),
+
+    return Response(response=json.dumps(request.json),
                     status=200,
                     mimetype="application/json")
 
 
 @app.route("/post/<status>", methods=["POST"])
 def echo_with_status(status):
-    return Response(response=request.data.decode('utf-8'),
+    return Response(response=json.dumps(request.json),
                     status=status,
                     mimetype="application/json")
 
