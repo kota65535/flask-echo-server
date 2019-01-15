@@ -14,7 +14,7 @@ def hello():
 
 @app.route('/post', methods=["POST"])
 def echo():
-
+    print(request.json)
     return Response(response=json.dumps(request.json),
                     status=200,
                     mimetype="application/json")
