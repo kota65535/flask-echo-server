@@ -28,4 +28,4 @@ def echo_with_status(status):
 
 
 if __name__ == "__main__":
-    app.run(debug=True, host='0.0.0.0', port=8888, threaded=True)
+    app.run()
